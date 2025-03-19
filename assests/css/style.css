@@ -1,0 +1,315 @@
+:root {
+    --primary-color: hsl(0, 6%, 24%);
+    --secondary-color: hsl(0, 36%, 70%);
+    --underline-height: 3px;
+  }
+  
+  html {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+  }
+  
+  * {
+    margin: 0;
+  }
+  
+  body {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+  }
+  
+  .main {
+    background-image: url("images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 58vw; /* Default width */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 8vh 11.5vw; /* Default padding */
+  }
+  
+  h1 {
+    color: var(--primary-color);
+    font-weight: 400;
+    font-size: 4rem; /* Default size */
+    text-transform: uppercase;
+    letter-spacing: 1.3rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  h1:first-of-type {
+    color: var(--secondary-color);
+    font-weight: 300;
+  }
+  
+  h1:last-of-type {
+    margin-bottom: 0;
+  }
+  
+  p {
+    color: var(--secondary-color);
+    font-weight: 400;
+    width: 85%;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 1.2rem 0;
+  }
+  
+  img.desktop {
+    width: 42vw;
+    height: 100%;
+  }
+  
+  img.mobile {
+    display: none;
+  }
+  
+  /* Logo Styles */
+  .logo {
+    display: flex;
+    align-items: center; /* Aligns text vertically */
+    position: relative; /* Position for the ::after pseudo-element */
+    white-space: nowrap; /* Prevents text from wrapping to a new line */
+    cursor: pointer; /* Changes cursor to pointer */
+    margin-bottom: 2rem; /* Added margin for spacing below the logo */
+    font-size: 2.5rem; /* Default size */
+  }
+  
+  .logo-main,
+  .logo-collection {
+    color: var(--primary-color);
+    font-size: 1.5rem; /* Same size for both parts */
+    font-weight: 700; /* Make it bold */
+    margin-left: 0.25rem; /* Small spacing between parts */
+  }
+  
+  /* Optional: Different color for the collection */
+  .logo-collection {
+    color: var(--secondary-color);
+  }
+  
+  /* Underline Effect */
+  .logo::after {
+    content: "";
+    position: absolute;
+    bottom: -5px; /* Position under the text */
+    left: 0;
+    right: 0;
+    height: var(--underline-height); /* Thickness of the underline */
+    background-color: var(--secondary-color); /* Color of the underline */
+    transform: scaleX(0); /* Start with scale 0 */
+    transition: transform 0.3s ease; /* Animation duration and ease */
+    z-index: -1; /* Place behind the text */
+  }
+  
+  /* Hover Effect */
+  .logo:hover::after {
+    transform: scaleX(1); /* Scale to full width on hover */
+  }
+  
+  h1 {
+    margin-top: 0; /* Resetting margin-top if needed */
+  }
+  
+  .another-div {
+    margin-top: 10%;
+  }
+  
+  a,
+  a:hover {
+    text-decoration: none;
+  }
+  
+  .socialbtns {
+    display: flex; /* Use flexbox for horizontal alignment */
+    align-items: center; /* Center vertically */
+    padding: 10px 0; /* Optional: Add padding */
+  }
+  
+  .socialbtns span {
+    margin-right: 10px; /* Space between the text and icons */
+    font-size: 30px; /* Font size for the label */
+  }
+  
+  .socialbtns ul {
+    display: flex; /* Make the list display flex to align items in a row */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    gap: 10px; /* Add gap between items */
+  }
+  
+  .socialbtns li {
+    list-style: none;
+    display: flex; /* Ensure li elements are flex containers */
+    align-items: center; /* Center icons vertically */
+  }
+  
+  .socialbtns .fab {
+    width: 40px;
+    height: 40px; /* Changed height to match width */
+    color: #000;
+    background-color: #FFF;
+    border: 1px solid #000;
+    padding: 8px; /* Adjusted padding */
+    border-radius: 50%;
+    display: flex; /* Flexbox to center icons */
+    justify-content: center; /* Center icons */
+    align-items: center; /* Center icons vertically */
+  }
+  
+  .socialbtns .fab:hover {
+    color: #ffffff;
+    background-color: #000;
+    border: 1px solid #000;
+  }
+  
+
+  
+  @media (max-width: 768px) {
+    .main {
+      width: 95vw; /* Adjust the width for smaller screens */
+      padding: 3vh 5vw; /* Adjust padding for smaller screens */
+    }
+  
+    .logo {
+      font-size: 1.5rem; /* Smallest logo size */
+    }
+    .mobile{
+      background-color: red;
+    }
+
+    h1 {
+      font-size: 1.5rem; /* Smallest heading size */
+    }
+  
+    p {
+      font-size: 0.75rem; /* Smallest paragraph size */
+    }
+  
+    .socialbtns {
+      display: flex; /* Use flexbox for horizontal alignment */
+      width: 100%;
+      align-items: center; /* Center vertically */
+      padding: 10px 0; /* Optional: Add padding */
+    }
+  
+    .socialbtns span {
+      margin-right: 10px; /* Space between the text and icons */
+      font-size: 20px; /* Font size for the label */
+    }
+  
+    .socialbtns ul {
+      display: flex; /* Make the list display flex to align items in a row */
+      padding: 0; /* Remove default padding */
+      margin: 0; /* Remove default margin */
+      gap: 10px; /* Add gap between items */
+    }
+  
+    .socialbtns li {
+      list-style: none;
+      display: flex; /* Ensure li elements are flex containers */
+      align-items: center; /* Center icons vertically */
+    }
+  
+    .socialbtns .fab {
+      width: 20px; /* Further decrease icon size */
+      height: 20px; /* Maintain aspect ratio */
+      color: #000;
+      background-color: #FFF;
+      border: 1px solid #000;
+      padding: 5px; /* Adjusted padding */
+      border-radius: 50%;
+      display: flex; /* Flexbox to center icons */
+      justify-content: center; /* Center icons */
+      align-items: center; /* Center icons vertically */
+    }
+  
+    .socialbtns .fab:hover {
+      color: #ffffff;
+      background-color: #000;
+      border: 1px solid #000;
+    }
+  
+    img.desktop {
+      display: none; /* Hide desktop image */
+    }
+  
+    img.mobile {
+      display: block; /* Show mobile image */
+      width: 100%; /* Make mobile image responsive */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    body {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+    .main {
+      width: 95vw; /* Adjust the width for very small screens */
+      padding: 3vh 5vw; /* Adjust padding for very small screens */
+    }
+  
+    .logo {
+      font-size: 1.5rem; /* Smallest logo size */
+    }
+    .mobile{
+      background-color: red;
+    }
+  
+    h1 {
+      font-size: 2rem; /* Smallest heading size */
+    }
+  
+    p {
+      font-size: 0.75rem; /* Smallest paragraph size */
+    }
+  
+  display: flex; /* Flexbox for horizontal alignment */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically within the container */
+  padding: 10px 0; /* Optional: Add padding */
+  
+    .socialbtns span {
+      margin-right: 10px; /* Space between the text and icons */
+      font-size: 20px; /* Font size for the label */
+    }
+  
+    .socialbtns ul {
+      display: flex; /* Make the list display flex to align items in a row */
+      padding: 0; /* Remove default padding */
+      margin: 0; /* Remove default margin */
+      gap: 10px; /* Add gap between items */
+    }
+  
+    .socialbtns li {
+      list-style: none;
+      display: flex; /* Ensure li elements are flex containers */
+      align-items: center; /* Center icons vertically */
+    }
+  
+    .socialbtns .fab {
+      width: 20px; /* Further decrease icon size */
+      height: 20px; /* Maintain aspect ratio */
+      color: #000;
+      background-color: #FFF;
+      border: 1px solid #000;
+      padding: 5px; /* Adjusted padding */
+      border-radius: 50%;
+      display: flex; /* Flexbox to center icons */
+      justify-content: center; /* Center icons */
+      align-items: center; /* Center icons vertically */
+    }
+  
+    .socialbtns .fab:hover {
+      color: #ffffff;
+      background-color: #000;
+      border: 1px solid #000;
+    }
+  }
+  
