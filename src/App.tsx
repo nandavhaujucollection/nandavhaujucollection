@@ -114,7 +114,6 @@ function App() {
               src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
               alt="Elegant fashion model showcasing Nanda Vhauju Collection's signature style"
               className="w-full h-[600px] object-cover rounded-2xl shadow-2xl transform -rotate-3 transition-transform hover:rotate-0 duration-500"
-              loading="lazy"
             />
           </div>
         </div>
